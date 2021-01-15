@@ -57,7 +57,7 @@ src
 ├── Alien.re          <- Dessine les aliens
 ├── Alien_reducer.re  <- Reducer de l'état des aliens
 ├── Bg.re             <- Dessine les fonds d'écran
-├── Colision.re       <- Permet de détecter les colisions
+├── Collision.re       <- Permet de détecter les Collisions
 ├── Constants.re      <- Contient les constantes comme la hauteur et la largeur de l'écran
 ├── Image.re          <- Fichier utilitaire servant à dessiner les images
 ├── Main.re           <- Point d'entrer et coeur du système
@@ -422,11 +422,11 @@ let reducer = (elapsedTime: float, state: Types.alienState, action: Actions.all)
 #tuple, #list, #concatenation
 ```
 
-L'entreprise est presque prêt ! Seul le système de detection des colisions reste inopérant. Appuyez sur la barre espace et vous constaterez le problème !
+L'entreprise est presque prêt ! Seul le système de detection des Collisions reste inopérant. Appuyez sur la barre espace et vous constaterez le problème !
 
-![Dure de repousser une invasion comme ça !](./docs/no-colision.gif)
+![Dure de repousser une invasion comme ça !](./docs/no-Collision.gif)
 
-Regarder le fichier `Colision.re`, il contient la fonction `findNotCollided` responsable de prendre les aliens et les projectiles et de ne resortir que ceux qui n'ont pas eu de colision entre-eux. Comme pour les derniers chapitres, vous pourez compter sur les tests unitaires pour vous guider. Pour cette fonction nous devrons utiliser la fonction `fold_left` du module `List`, et de la concaténation de `list` grâce à l'operateur `@`.
+Regarder le fichier `Collision.re`, il contient la fonction `findNotCollided` responsable de prendre les aliens et les projectiles et de ne resortir que ceux qui n'ont pas eu de Collision entre-eux. Comme pour les derniers chapitres, vous pourez compter sur les tests unitaires pour vous guider. Pour cette fonction nous devrons utiliser la fonction `fold_left` du module `List`, et de la concaténation de `list` grâce à l'operateur `@`.
 
 <details>
 <summary><i>Découvrer la solution ici</i></summary>

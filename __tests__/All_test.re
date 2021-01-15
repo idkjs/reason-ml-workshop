@@ -2,7 +2,7 @@ open Jest;
 
 open Types;
 
-open Colision;
+open Collision;
 
 open Expect;
 
@@ -281,7 +281,7 @@ describe("Alien_reducer.re", () => {
   );
 });
 
-describe("Colision.re", () =>
+describe("Collision.re", () =>
   describe("findNotCollided", () => {
     test("should return empty shot list and alien list when they collide", () => {
       /* given */
