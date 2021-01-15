@@ -57,7 +57,7 @@ src
 ├── Alien.re <- Draw the aliens
 ├── Alien_reducer.re <- Reducer of alien state
 ├── Bg.re <- Draw the wallpapers
-├── Colision.re <- Used to detect colisions
+├── Collision.re <- Used to detect Collisions
 ├── Constants.re <- Contains constants such as screen height and width
 ├── Image.re <- Utility file used to draw the images
 ├── Main.re <- Entry point and heart of the system
@@ -427,9 +427,9 @@ let reducer = (elapsedTime: float, state: Types.alienState, action: Actions.all)
 
 The business is almost ready! Only the collision detection system remains inoperative. Press the space bar and you will see the problem!
 
-! [Hard to repel an invasion like this!] (./ docs / no-colision.gif)
+! [Hard to repel an invasion like this!] (./ docs / no-Collision.gif)
 
-Look at the `Colision.re` file, it contains the` findNotCollided` function responsible for taking aliens and projectiles and only bringing out those that have not had a collision between them. As with the last chapters, you can rely on unit tests to guide you. For this function we will have to use the `fold_left` function of the` List` module, and the concatenation of `list` thanks to the` @ `operator.
+Look at the `Collision.re` file, it contains the` findNotCollided` function responsible for taking aliens and projectiles and only bringing out those that have not had a collision between them. As with the last chapters, you can rely on unit tests to guide you. For this function we will have to use the `fold_left` function of the` List` module, and the concatenation of `list` thanks to the` @ `operator.
 
 <details>
 <summary> <i> Discover the solution here </i> </summary>
