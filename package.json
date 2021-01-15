@@ -3,13 +3,17 @@
   "version": "0.1.0",
   "scripts": {
     "init": "bsb -make-world",
-    "watch": "bsb -make-world -w",
-    "start":
-      "concurrently -c bgBlue.bold,black.bgRed.bold -n BSB,Webpack 'bsb -make-world -w' 'webpack --watch'",
+    "watch": "bsb -make-world -w && watchexec -w server --exts re,rei -r -c ",
+    "start": "concurrently -c bgBlue.bold,black.bgRed.bold -n BSB,Webpack 'yarn watch' 'webpack --watch'",
     "clean": "bsb -clean-world",
     "test": "jest --watch --bail"
   },
-  "keywords": ["ReasonML", "BuckleScript", "OCaml", "Workshop"],
+  "keywords": [
+    "ReasonML",
+    "BuckleScript",
+    "OCaml",
+    "Workshop"
+  ],
   "authors": [
     "Mathieu Breton <mathieu.breton@js-republic.com>",
     "Emmanuel Ernest <emmanuel.ernest@js-republic.com>"
@@ -22,7 +26,8 @@
     "@glennsl/bs-jest": "^0.6.0",
     "bs-platform": "^8.4.2",
     "concurrently": "^5.3.0",
-    "webpack": "^3.11.0"
+    "webpack": "^5.14.0",
+    "webpack-cli": "^4.3.1"
   },
   "dependencies": {
     "bs-webapi": "^0.19.1"
