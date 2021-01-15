@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "scripts": {
     "init": "bsb -make-world",
+    "watch": "bsb -make-world -w",
     "start":
       "concurrently -c bgBlue.bold,black.bgRed.bold -n BSB,Webpack 'bsb -make-world -w' 'webpack --watch'",
     "clean": "bsb -clean-world",
@@ -18,12 +19,12 @@
     "bail": true
   },
   "devDependencies": {
-    "@glennsl/bs-jest": "^0.4.2",
-    "bs-platform": "^2.2.0",
-    "concurrently": "^3.5.1",
+    "@glennsl/bs-jest": "^0.6.0",
+    "bs-platform": "^8.4.2",
+    "concurrently": "^5.3.0",
     "webpack": "^3.11.0"
   },
   "dependencies": {
-    "bs-webapi": "^0.8.3"
+    "bs-webapi": "^0.19.1"
   }
 }
